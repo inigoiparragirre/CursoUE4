@@ -48,10 +48,14 @@ void ANireFigura::Tick( float DeltaTime )
 		else
 		{
 			// Shrink half as fast as we grow
+
+			//Add current scale
 			CurrentScale -= (DeltaTime * 0.5f);
 
 		}
 		// Make sure we never drop below our starting size, or increase past double size.
+
+		//Otro cambio
 		CurrentScale = FMath::Clamp(CurrentScale, 1.0f, 4.0f);
 		OurVisibleComponent->SetWorldScale3D(FVector(CurrentScale));
 	}
